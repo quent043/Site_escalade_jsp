@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>SiteWeb</display-name>
+	<welcome-file-list>
+		<welcome-file>HomePage.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>registerServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>produitServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.ProduitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>produitServlet</servlet-name>
+		<url-pattern>/creerProduit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>detailProduitServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.DetailProduitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>detailProduitServlet</servlet-name>
+		<url-pattern>/detailProduit</url-pattern>
+
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>listeProduitsServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.ListeProduitsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listeProduitsServlet</servlet-name>
+		<url-pattern>/listeProduits</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateUserServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.UpdateUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateUserServlet</servlet-name>
+		<url-pattern>/updateUser</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>disconnectServlet</servlet-name>
+		<servlet-class>com.fr.adaming.controller.DisconnectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>disconnectServlet</servlet-name>
+		<url-pattern>/disconnect</url-pattern>
+	</servlet-mapping>
+
+	<!-- <jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config> -->
+
+
+</web-app>
